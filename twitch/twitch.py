@@ -18,16 +18,15 @@ resp = requests.post(
     headers={"Client-Id": "kimne78kx3ncx6brgo4mv6wki5h1ko"},
 )
 
-    edges = json.loads(resp.content)["data"]["streams"]["edges"]
-    games = [(f["node"]["title"], f["node"]["viewersCount"]) for f in edges]
+edges = json.loads(resp.content)["data"]["streams"]["edges"]
+games = [(f["node"]["title"], f["node"]["viewersCount"]) for f in edges]
 
-    # games:
-    [
-        ("Let us GAME", 78250),
-        ("(REBROADCAST) Worlds Play-In Knockouts: Cloud9 vs. Gambit Esports", 36783),
-        ("RuneFest 2018 - OSRS Reveals !schedule", 35042),
-        (None, 25237),
-        ("Front Page of TWITCH + Fortnite FALL SKIRMISH Training!", 22380),
-        ("Reckful - 3v3 with barry and a german", 20399),
-    ]
-
+# games:
+[
+    ("Let us GAME", 78250),
+    ("(REBROADCAST) Worlds Play-In Knockouts: Cloud9 vs. Gambit Esports", 36783),
+    ("RuneFest 2018 - OSRS Reveals !schedule", 35042),
+    (None, 25237),
+    ("Front Page of TWITCH + Fortnite FALL SKIRMISH Training!", 22380),
+    ("Reckful - 3v3 with barry and a german", 20399),
+]
